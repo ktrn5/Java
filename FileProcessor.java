@@ -23,7 +23,7 @@ public class FileProcessor {
         return file.exists();
     }
 
-    // method to reas and analyze the file (count everything)
+    // method to read and analyze the file (count everything)
     public void processFile(String output_path) throws IOException {
         FileReader reader = null;
         try {
@@ -38,16 +38,17 @@ public class FileProcessor {
                 char_read = reader.read();
 
                 // uppercase
-                if (character >= 'A' && character <= 'Z') {
-                    int index = character - 'A';
-                    uppercaseUsage[index]++;
+                if (character >= 'A' && character <= 'Z') { //
+                    int index = character - 'A'; //finding the index for character by subtracting the code of the character 'A' from the code of the current character
+                    //(--> getting the index for this character in the alphabet, like: a - 1 letter, b - 2......)
+                    uppercaseUsage[index]++; // tracks the number of occurrences of each letter in uppercase
                 }
                 // lowercase
                 else if (character >= 'a' && character <= 'z') {
                     int index = character - 'a';
                     lowercaseUsage[index]++;
                 }
-                // gifits
+                // digits
                 else if (character >= '0' && character <= '9') {
                     int index = character - '0';
                     digitsUsage[index]++;
