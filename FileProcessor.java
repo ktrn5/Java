@@ -37,10 +37,8 @@ public class FileProcessor {
                 char character = characters[0];
                 char_read = reader.read();
 
-                // logic: using ascii calculations
-                //finding the index for character by subtracting the code of the character 'A' from the code of the current character
+                //finding the index for character by subtracting the code of the character 'A' from the code of the current character (using ascii)
                 //(--> getting the index for this character in the alphabet, like: a - 1 letter, b - 2......)
-                // example:
                 // character = 'C' ( 67 в ASCII):  --> 'C' - 'A' = 67 - 65 = 2 (that's how we count amount of particular character)
                 // uppercase
                 if (character >= 'A' && character <= 'Z') { //
