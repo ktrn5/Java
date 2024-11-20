@@ -28,7 +28,7 @@ public class Person {
             return LocalDate.parse(date, slashFormat);
         }
         else {
-            throw new IllegalArgumentException("неверлный формат даты: используйте дд.мм.гггг или дд/мм/гггг");
+            throw new IllegalArgumentException("неверный формат даты: используйте дд.мм.гггг или дд/мм/гггг");
         }
 
     }
